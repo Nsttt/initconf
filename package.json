@@ -1,0 +1,54 @@
+{
+  "name": "initconf",
+  "version": "1.0.0",
+  "description": "CLI tool to initialize configuration files based on my preferences",
+  "author": "Nestor Lopez <nestor@nstlopez.com>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "initconfig": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsttt/initconf.git"
+  },
+  "keywords": [
+    "initconf",
+    "eslint",
+    "prettier",
+    "vscode",
+    "cli-tool",
+    "typescript",
+    "github-actions",
+    "gitlab-ci",
+    "cli",
+    "settings"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --minify",
+    "lint": "eslint . --cache --cache-strategy content --ignore-path .gitignore && tsc --noEmit",
+    "format": "prettier --write '**/*.{ts,tsx,cjs,mjs,json,md,mdx}'",
+    "clean": "rm -rf node_modules dist"
+  },
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^9.1.4",
+    "ora": "^6.1.2",
+    "sort-package-json": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "prettier": "^2.8.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3"
+  }
+}
